@@ -1,0 +1,45 @@
+@import "../../themes/variables.module.scss";
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $primary-light;
+
+  .fab {
+    position: fixed;
+    bottom: 5%;
+    right: 8%;
+  }
+
+  .todoContainer {
+    width: 50%;
+    height: 90%;
+    @media (max-width: 1220px) {
+      width: 60%;
+    }
+    @media (max-width: 1020px) {
+      width: 90%;
+    }
+  }
+
+  .title {
+    margin: 3%;
+    font-weight: 600;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.darkMain {
+  @extend .main;
+  background-color: $primary-dark;
+
+  .title {
+    color: white;
+  }
+}
